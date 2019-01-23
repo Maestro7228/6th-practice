@@ -1,0 +1,27 @@
+\documentclass[a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english, russian]{babel}
+\usepackage[european,cuteinductors]{circuitikz}
+
+\title{Практическая работа №6}
+\author{Студент группы 8871 Ковлягин В.В.}
+
+\begin{document}
+\maketitle
+\begin{center}
+Схема соединения треугольника с звездой (Схема №1)
+\end{center}
+\begin{circuitikz}
+\draw (0,-4) to [C, l_={$C_1$},*-*] (4,-4);
+\draw (2,0) to [R, l={$R_1$},*-*] (4,-4);
+\draw (0,-4) to [L, l={$L_1$},*-*] (2,0);
+\draw (2,0) -- (10,0);
+\draw (4,-4) -- (8,-4);
+\draw (0,-4) -- (0,-6);
+\draw (0,-6) -- (12,-6);
+\draw (12,-6) -- (12,-4);
+\draw (8,-4) to [C, l_={$C_2$},*-*] (10,-2);
+\draw (10,-2) to [R, l={$R_2$},*-*] (10,0);
+\draw (10,-2)  to [L, l={$L_2$},*-*] (12,-4);
+\end{circuitikz}
+\end{document}
